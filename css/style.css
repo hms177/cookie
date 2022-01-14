@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:before,
+:after {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-color: #ffb55a;
+    font-weight: 400;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    vertical-align: center;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+/* cookie-section */
+.cookie-section .title {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #fff;
+}
+.cookie-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cookie-wrap .cookie {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+}
+.cookie-wrap .cookie .cookie-inner {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.3);
+    outline: 0.1rem solid #d6984c;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+    transition: outline 0.3s ease, outline-offset 0.3s ease;
+}
+
+.cookie-wrap .cookie .cookie-inner:hover {
+    outline: 0.3rem solid #e67e00;
+    outline-offset: 0rem;
+}
+.cookie-wrap .cookie .cookie-inner img {
+    transition: transform 0.3s ease;
+}
+.cookie-wrap .cookie .cookie-inner:hover img {
+    transform: scale(0.9);
+}
+.cookie-wrap .cookie .cookie-inner h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+}
+.cookie-wrap .cookie .cookie-inner:hover h4 strong {
+    color: #e67e00;  
+}
+.cookie-wrap .cookie .cookie-inner h4 .en {
+    display: block;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.cookie-wrap .cookie .cookie-inner .kcal {
+    font-size: 1rem;
+    color: #444;
+    display: block;
+    margin-top: 15px;
+}
+
+/* cookie-details */
+.cookie-details {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.cookie-details .detail {
+    position: relative;
+    display: none;
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+    width: 25rem;
+}
+.cookie-details .detail.active {
+    display: block;
+}
+.cookie-details .detail h4 {
+    color: #444;
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+}
+.cookie-details .detail h4 .en {
+    display: block;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-top: 0.3rem;
+    color: #666;
+}
+.cookie-details .detail p {
+    padding: 1rem 1rem;
+    color: #777;
+    word-break: break-all;
+    font-size: 1rem;
+    letter-spacing: -0.03rem;
+    line-height: 1.6;
+}
+.cookie-details .detail .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #444;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.cookie-details .detail .fa-times:hover {
+    transform: rotate(90deg);
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+.buttons a {
+    flex: 0 0 48%;
+    max-width: 48%;
+    color: #444;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+.buttons .cart {
+    margin-right: 4%;
+    border: 1px solid #e67e00;
+}
+.buttons .cart:hover {
+    background-color: #e67e00;
+    border: 1px solid transparent;
+    color: #fff;
+}
+.buttons .buy {
+    background-color: #e67e00;
+    border-color: transparent;
+    color: #fff;
+}
+
+/* responsive */
+@media (max-width: 991px){
+    
+}
+
+@media (max-width: 768px){
+    .cookie-wrap .cookie {   
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 450px){
+    .cookie-wrap .cookie {   
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
